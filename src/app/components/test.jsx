@@ -23,19 +23,19 @@ async function getData() {
     const data = await getData()
     const items = data.data;
     
-    return <main className=' w-full p-4 py-10 text-black flex flex-col justify-center items-center md:px-20  '>
+    return <main className=' w-full p-4 py-10 text-black flex flex-col justify-center items-center md:px-20 lg:px-40  '>
         {/* container */}
         <div className=' p-4  w-full rounded-xl flex flex-col gap-4 backdrop-blur-sm bg-white/10 md:p-10  '>
             {/* Text container */}
             <div className=' flex flex-col gap-4 '>
-                <h2 className=' text-lg font-bold md:text-xl'>Market trends</h2>
+                <h2 className=' text-xl font-bold md:text-2xl'>Market trends</h2>
                 <div className=' flex gap-3 '>
                     <button className=' px-2 py-1 rounded-xl text-white bg-[#814dea] '>Spot</button>
                     <button className=' px-2 py-1 rounded-xl text-black  backdrop-blur-sm bg-white/10 '>Derivatives</button>
                 </div>
             </div>
             {/*  market data */}
-            <table  className="table-fixed text-left  ">
+            <table  className="table-fixed text-left">
               <thead >
                 <tr  >
                   <th className='hidden md:table-cell text-left p-3 backdrop-blur-sm bg-white/10 '>NAME</th>
@@ -64,6 +64,7 @@ async function getData() {
               </tbody>
               
             </table>
+            <div className='w-full flex justify-end'><button className='px-4 py-2 rounded-xl text-black  backdrop-blur-sm bg-white/10'>View All 500+ Coins </button></div>
             
         </div>
     </main>
