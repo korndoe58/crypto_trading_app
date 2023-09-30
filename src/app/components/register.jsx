@@ -1,7 +1,7 @@
 
 
 export default function Register() {
-    return <div className=" bg-slate-500 w-full h-[60vh] p-4 flex flex-col justify-around">
+    return <div className="  text-black w-full h-[60vh] p-4 flex flex-col justify-around">
         {/* text container */}
         <div className="flex flex-col gap-4" >
             <h1 className=" text-3xl font-bold ">A Platform for Crypto Derivative Traders</h1>
@@ -10,7 +10,7 @@ export default function Register() {
         {/* register form */}
         <div className=" flex flex-col gap-2">
             <input className=" p-2 ring-1 ring-blue-100 rounded" type="email" placeholder="Your email address " />
-            <button className="bg-[#773cee] text-[#ffffff] p-2 rounded">Register</button>
+            <button className="bg-[#814dea] text-[#ffffff] p-2 rounded">Register</button>
         </div>
     </div>
   }

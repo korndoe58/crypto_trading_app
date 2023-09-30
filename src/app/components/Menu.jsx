@@ -26,7 +26,7 @@ const Menu = () => {
       className="cursor-pointer"
     />
     {open && (
-      <div className="bg-black text-white absolute left-0 bottom-0 w-full h-[calc(100vh-7rem)] flex flex-col gap-8 items-center justify-center text-3xl z-10">
+      <div className=" overflow-y-hidden backdrop-blur-sm bg-white/50 text-black font-semibold absolute left-0 bottom-0 w-full h-[calc(100vh-4rem)] flex flex-col gap-8 items-center justify-center text-3xl z-10 ">
         {links.map((item) => (
           <Link href={item.url} key={item.id} onClick={() => setOpen(false)}>
             {item.title}
