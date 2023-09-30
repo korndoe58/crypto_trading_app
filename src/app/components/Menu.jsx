@@ -4,10 +4,13 @@ import Link from "next/link";
 import { useState } from "react";
 
 const links = [
-  { id: 1, title: "Homepage", url: "/" },
-  { id: 2, title: "Data", url: "/data" },
-  { id: 3, title: "Chart", url: "/chart" },
-  { id: 4, title: "BUY BTC", url: "/buy" },
+  { id: 1, title: "Trade", url: "/" },
+  { id: 2, title: "Guilds", url: "/data" },
+  { id: 3, title: "Trading Guilds ", url: "/chart" },
+  { id: 4, title: "why SCoin", url: "/buy" },
+  { id: 5, title: "Institutions", url: "/buy" },
+
+
 ];
 
 const Menu = () => {
@@ -34,11 +37,26 @@ const Menu = () => {
         ))}
 
         <Link
-          href={user ? "/orders" : "login"}
+          href={user ? "/trade" : "login"}
           onClick={() => setOpen(false)}
         >
-          {user ? "Orders" : "Login"}
+          {user ? "trade" : "Login"}
         </Link>
+        <div className="  flex items-center">
+          <label htmlFor="currency" className="sr-only">
+            Currency
+          </label>
+          <select
+            id="language"
+            name="language"
+            className="h-full rounded-md border-0 bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 "
+          >
+            <option>TH</option>
+            <option>EN</option>
+            <option>CH</option>
+          </select>
+        </div>
+
       </div>
     )}
   </div>

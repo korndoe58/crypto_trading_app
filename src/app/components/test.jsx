@@ -23,34 +23,48 @@ async function getData() {
     const data = await getData()
     const items = data.data;
     
-    return <main className=' w-full p-4 py-10 text-black flex flex-col justify-center items-center  '>
+    return <main className=' w-full p-4 py-10 text-black flex flex-col justify-center items-center md:px-20  '>
         {/* container */}
-        <div className=' p-4  w-full rounded-xl flex flex-col gap-4 backdrop-blur-sm bg-white/10 '>
+        <div className=' p-4  w-full rounded-xl flex flex-col gap-4 backdrop-blur-sm bg-white/10 md:p-10  '>
             {/* Text container */}
             <div className=' flex flex-col gap-4 '>
-                <h2 className=' text-lg font-bold'>Market trends</h2>
+                <h2 className=' text-lg font-bold md:text-xl'>Market trends</h2>
                 <div className=' flex gap-3 '>
                     <button className=' px-2 py-1 rounded-xl text-white bg-[#814dea] '>Spot</button>
-                    <button className=' px-2 py-1 rounded-xl text-white bg-[#814dea]'>Derivatives</button>
+                    <button className=' px-2 py-1 rounded-xl text-black  backdrop-blur-sm bg-white/10 '>Derivatives</button>
                 </div>
             </div>
             {/*  market data */}
-            <div className=''>
+            <table  className="table-fixed text-left  ">
+              <thead >
+                <tr  >
+                  <th className='hidden md:table-cell text-left p-3 backdrop-blur-sm bg-white/10 '>NAME</th>
+                  <th className='hidden md:table-cell text-right backdrop-blur-sm bg-white/10'>PRICE</th>
+                  <th className='hidden md:table-cell text-right backdrop-blur-sm bg-white/10'>24H CHANGE</th>
+                  <th className='hidden md:table-cell text-right backdrop-blur-sm bg-white/10'>24H VOLUME</th>
+                  <th className='hidden md:table-cell text-right backdrop-blur-sm bg-white/10 '></th>
+                </tr>
+              </thead>
+              
+              <tbody>
                 {items.map((item)=>(
-                <div className=' border-b-[1px]  py-3  flex justify-between items-center  ' key={item.id}>
-                    <span className=' font-bold'>{item.name}</span>
-                    {/* price/24hchange */}
-                    <div className=' flex flex-col text-xs items-end '>
-                        <span >${item.quote.USD.price.toFixed(2)}</span>
-                        <span 
-                        style={{
-                            color: item.quote.USD.percent_change_24h >= 0 ? "#90EE90" : "#FB4346",
-                          }}
-                        >{item.quote.USD.percent_change_24h.toFixed(2)}%</span>
-                    </div>
-                </div>
+                <tr  key={item.id}>
+                  <td className='py-4 border-b-[1px]'>{item.name}</td>
+                  <td className='text-right border-b-[1px]' >${item.quote.USD.price.toFixed(2)}</td>
+                  <td
+                  className='text-right border-b-[1px]'
+                  style={{
+                    color: item.quote.USD.percent_change_24h >=0 ? "green" : "red",
+                  }}
+                  >{item.quote.USD.percent_change_24h.toFixed(2)}%</td>
+                  <td className='hidden md:table-cell text-right border-b-[1px]'>{item.quote.USD.volume_24h.toFixed(0)}</td>
+                  <td className='hidden md:table-cell text-xs text-right border-b-[1px]'><button className='p-3 py-2  rounded-lg text-white bg-[#814dea]'>TRADE NOW</button></td>
+                </tr>
                 ))}
-            </div>
+              </tbody>
+              
+            </table>
+            
         </div>
     </main>
    
