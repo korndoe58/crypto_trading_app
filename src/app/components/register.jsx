@@ -1,7 +1,7 @@
 
 
 export default function Register() {
-    return <div className="  text-black w-full h-[50vh] p-4 flex flex-col justify-around md:px-20 md:h-[30vh] lg:px-30 xl:px-40  ">
+    return <div className="  text-black w-full h-[60vh] p-4 flex flex-col justify-around md:px-20 md:h-[30vh] lg:px-30 xl:px-40  ">
         {/* text container */}
         <div className="flex flex-col gap-4" >
             <h1 className=" text-3xl font-bold ">A Platform for Crypto Derivative Traders</h1>

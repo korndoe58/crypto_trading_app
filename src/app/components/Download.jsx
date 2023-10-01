@@ -1,7 +1,8 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Download() {
-    return <div className=" w-full h-[50vh] p-4 md:px-20 md:h-[35vh] lg:px-30 xl:px-40   ">
+    return <div className=" w-full h-[55vh] p-4 md:px-20 md:h-[35vh] lg:px-30 xl:px-40   ">
         {/* wrapper */}
         <div className=" w-full h-full p-4 flex flex-col justify-around items-start backdrop-blur-sm bg-white/10 rounded-lg md:p-10 md:gap-4">
             {/* text container */}
@@ -11,8 +12,8 @@ export default function Download() {
             </div>
             {/* button */}
             <div className=" flex flex-col items-start gap-2 md:gap-4">
-                <button><Image src={'/appbutton.png'} alt='logo' width={150} height={50} /></button>
-                <button><Image src={'/gbutton.png'} alt='logo' width={150} height={100} /></button>
+                <Link href={'/'}><div className=" h-20 w-40 relative "><Image src={'/appbutton.png'} alt='logo' sizes="(max-width: 768px) 100vw" fill className=" object-contain" /></div></Link>
+                <Link href={'/'}><div className=" h-20 w-40 relative "><Image src={'/gbutton.png'} alt='logo' sizes="(max-width: 768px) 100vw" fill className=" object-contain" /></div></Link>
             </div>
         </div>
     </div>

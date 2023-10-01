@@ -10,7 +10,7 @@ const Navbar = () => {
     <div className='w-full h-16 border-b-[1px] border-white/10   p-4 flex justify-between items-center uppercase md:h-18 md:px-10 lg:px-20  xl:px-40 xl:h-24   '>
         {/* logo */}
         <div className="text-[#0d0b06] font-bold text-xl md:font-bold  md:text-center">
-            <Link className=' flex gap-2' href={'/'}><Image src={'/logo.png'} alt='logo' width={20} height={20} /></Link>
+          <Link href={'/'}><div className=" h-8 w-8 relative "><Image src={'/logo.png'} alt='logo' sizes="(max-width: 768px) 100vw" fill className=" object-contain" /></div></Link>
         </div>
         {/*mobile munu */}
         <div className="md:hidden">
@@ -18,11 +18,11 @@ const Navbar = () => {
         </div>
         {/* right LINKS */}
         <div className="hidden  md:flex text-sm gap-4 ">
-            <Link className='px-3 py-2 rounded-xl hover:backdrop-blur-sm hover:bg-white/30' href="/">Trade</Link>
+            <Link className='px-3 py-2 rounded-xl hover:backdrop-blur-sm hover:bg-white/30' href="/Trade">Trade</Link>
             <Link className='px-3 py-2 rounded-xl hover:backdrop-blur-sm hover:bg-white/30' href="/Guilds">Guilds</Link>
-            <Link className='px-3 py-2 rounded-xl hover:backdrop-blur-sm hover:bg-white/30' href="/chart">Trading Guilds</Link>
-            <Link className='px-3 py-2 rounded-xl hover:backdrop-blur-sm hover:bg-white/30' href="/chart">why SCoin</Link>
-            <Link className='px-3 py-2 rounded-xl hover:backdrop-blur-sm hover:bg-white/30' href="/buybtc">Institutions</Link>
+            <Link className='px-3 py-2 rounded-xl hover:backdrop-blur-sm hover:bg-white/30' href="/TradingGuilds">Trading Guilds</Link>
+            <Link className='px-3 py-2 rounded-xl hover:backdrop-blur-sm hover:bg-white/30' href="/why">why SCoin</Link>
+            <Link className='px-3 py-2 rounded-xl hover:backdrop-blur-sm hover:bg-white/30' href="/institutions">Institutions</Link>
 
             {/* lang */}
             <div className="  flex items-center">

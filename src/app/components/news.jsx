@@ -47,23 +47,23 @@ export default function News() {
   ];
     return <div className="w-screen overflow-x-scroll text-black">
       {/* WRAPPER */}
-      <div className="w-max flex">
+      <div className="w-max flex gap-2">
         {/* SINGLE ITEM */}
         {featuredProducts.map((item) => (
           <div
             key={item.id}
-            className=" w-screen h-[50vh] flex flex-col items-center justify-around p-4 backdrop-blur-sm bg-white/10 hover:bg-white/40 transition-all duration-300 md:w-[50vw]  xl:w-[33vw] xl:h-[60vh] cursor-pointer"
+            className=" w-screen h-[70vh] rounded-xl flex flex-col items-center justify-around p-4 backdrop-blur-sm bg-white/10 hover:bg-white/40 transition-all duration-300 md:w-[50vw] md:h-[50vh]  xl:w-[33vw] xl:h-[60vh] cursor-pointer"
           >
             {/* IMAGE CONTAINER */}
             {item.img && (
-              <div className="relative flex-1 w-full hover:w-[110%] transition-all duration-500">
-                <Image src={item.img} alt="" fill className="object-contain" />
+              <div className="relative flex-1 w-full  hover:w-[110%] transition-all duration-500">
+                <Image src={item.img} alt="" fill sizes="(max-width: 768px) 100vw" className="object-contain " />
               </div>
             )}
             {/* TEXT CONTAINER */}
-            <div className=" flex-1  flex flex-col items-center justify-center text-center gap-4">
+            <div className=" flex-1  flex flex-col items-center justify-center text-center gap-0">
               <h1 className="text-2xl font-bold uppercase xl:text-2xl 2xl:text-3xl">{item.title}</h1>
-              <p className="p-4  2xl:p-8">{item.desc}</p>
+              <p className="p-4  2xl:p-8 text-left">{item.desc}</p>
             </div>
           </div>
         ))}
