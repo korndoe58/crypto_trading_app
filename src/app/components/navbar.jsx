@@ -7,7 +7,7 @@ import Image from 'next/image'
 const Navbar = () => {
   const user = false;
   return (
-    <div className='w-full h-16 border-b-[1px] border-white/10   p-4 flex justify-between items-center uppercase md:h-18 md:px-10 lg:px-20  xl:px-40   '>
+    <div className='w-full h-16 border-b-[1px] border-white/10   p-4 flex justify-between items-center uppercase md:h-18 md:px-10 lg:px-20  xl:px-40 xl:h-24   '>
         {/* logo */}
         <div className="text-[#0d0b06] font-bold text-xl md:font-bold  md:text-center">
             <Link className=' flex gap-2' href={'/'}><Image src={'/logo.png'} alt='logo' width={20} height={20} /></Link>
