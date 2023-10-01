@@ -13,7 +13,7 @@ export default function Download() {
             {/* button */}
             <div className=" flex flex-col items-start gap-2 md:gap-4">
                 <Link href={'/'}><div className=" h-20 w-40 relative "><Image src={'/appbutton.png'} alt='logo' sizes="(max-width: 768px) 100vw" fill className=" object-contain" /></div></Link>
-                <Link href={'/'}><div className=" h-20 w-40 relative "><Image src={'/gbutton.png'} alt='logo' sizes="(max-width: 768px) 100vw" fill className=" object-contain" /></div></Link>
+                <Link href={'/'}><div className=" h-20 w-40 relative "><Image src={'/Gbutton.png'} alt='logo' sizes="(max-width: 768px) 100vw" fill className=" object-contain" /></div></Link>
             </div>
         </div>
     </div>
